@@ -24,7 +24,7 @@ Build-Depends-Indep:
  python-testscenarios (>= 0.4),
  python-testtools (>= 1.4.0),
  testrepository (>= 0.0.18)
-Standards-Version: 3.9.4
+Standards-Version: 3.9.5
 Homepage: https://github.com/cloudbase/networking-hyperv
 
 Package: networking-hyperv-7.0.3
