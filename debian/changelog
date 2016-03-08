@@ -1,0 +1,5 @@
+networking-hyperv-7.0.3 (1.0.2-0ubuntu1) trusty; urgency=medium
+
+  * Initial packaging of OpenStack Networking Hyper-V ML2 mechanism driver.
+
+ -- Costin Galan <cgalan@cloudbasesolutions.com>  Tue, 08 Mar 2016 20:05:23 +0200

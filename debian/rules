@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+%:
+		dh $@ --with python2 --buildsystem=python_distutils
+
+override_dh_fixperms:
+		find debian/python-networking-hyperv -name __init__.py -exec chmod a-x {} \;
+		dh_fixperms
+
+override_dh_auto_test:
+		rm -rf .testrepository
+		testr init && \
+		set -e && \
+		TEMP_REZ=`mktemp -t` && \
+		testr run --subunit hyperv.tests.unit | tee $$TEMP_REZ | subunit2pyunit; \
+		rm -f $$TEMP_REZ ;
+
+override_dh_clean:
+		rm -rf .testrepository
+		dh_clean
